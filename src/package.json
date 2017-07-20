@@ -1,0 +1,19 @@
+{
+  "name": "find-near-me",
+  "private": true,
+  "version": "1.3.2",
+  "description": "1.3.2",
+  "dependencies": {
+    "plusify": "0.1.0"
+  },
+  "scripts": {
+  "build:backgroundjs": "mkdir ../dist/background && browserify background/background.js > ../dist/background/background.js",
+  "build:option": "cp -r options ../dist",
+  "build:popup": "cp -r popup ../dist && browserify popup/popup.js > ../dist/popup/popup.js",
+  "build:manifest": "cp manifest.json ../dist",
+  "build:resources": "mkdir ../dist/resources && cp ../resources/Pin_{128X128,48X48,16X16}.png ../dist/resources/",
+
+  "build": "npm run clean && mkdir ../dist && npm run build:option && npm run build:popup && npm run build:backgroundjs && npm run build:manifest && npm run build:resources",
+  "clean": "rm -rf ../dist"
+  }
+}

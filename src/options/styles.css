@@ -1,0 +1,25 @@
+.label {
+	padding-right: 10px;
+}
+
+.body {
+	padding-top: 10px;
+	display: block;
+}
+
+.place {
+	width: 310px;
+}
+
+.place::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: lightgray;
+  font-style: italic;
+}
+
+.footer {
+	padding-top: 10px;
+}
+
+.status {
+	padding-bottom: 5px;
+}
